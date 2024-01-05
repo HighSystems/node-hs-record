@@ -74,7 +74,9 @@ export class HSRecord<RecordData extends HSRecordData = HSRecordData> {
 
 		const settings = merge(HSRecord.defaults, classOptions);
 
-		this.setTableId(settings.tableId)
+		this
+			.setApplicationId(settings.applicationId)
+			.setTableId(settings.tableId)
 			// @ts-expect-error
 			.setFids(settings.fids)
 			// @ts-expect-error
