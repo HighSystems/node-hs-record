@@ -1,0 +1,4 @@
+*
+!.gitignore
+!.npmignore
+!record.browserify.min.js

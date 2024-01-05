@@ -1,0 +1,40 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"ES6",
+			"DOM"
+		],
+		"target": "ES6",
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"outDir": "./dist/",
+		"declaration": true,
+		"allowJs": false,
+		"sourceMap": true,
+		"rootDir": "./src/",
+		"removeComments": false,
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": [
+		"./src/types/**/*",
+		"./src/tests/**/*",
+		"src/record.ts"
+	],
+	"ts-node": {
+		"files": true
+	},
+	"typedocOptions": {
+		"readme": "./README.md",
+		"out": "./docs/",
+		"theme": "default",
+		"name": "Node-QB-Record",
+		"includeVersion": true,
+		"excludeExternals": true
+	}
+}

@@ -1,0 +1,8 @@
+assets/
+docs/
+.editorconfig
+.env
+.env.example
+ava.config.mjs
+package-lock.json
+tsconfig.json
