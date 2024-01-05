@@ -284,7 +284,7 @@ export class HSRecord<RecordData extends HSRecordData = HSRecordData> {
 		const fids = this.getFids();
 		const names = Object.entries(fids).map(([ name ]) => name);
 
-		return await this._hs.upsertRecords({
+		const results = (await this._hs.upsertRecords({
 			appid: this.getApplicationId(),
 			tableid: this.getTableId(),
 			data: [names.filter((name) => {
@@ -317,7 +317,12 @@ export class HSRecord<RecordData extends HSRecordData = HSRecordData> {
 			}, {} as Record<string, any>)],
 			requestOptions,
 			returnAxios: true
-		});
+		})) as unknown as string[];
+
+		// @ts-expect-error
+		this.set('recordid', results[0]);
+
+		return this;
 	}
 
 	set<F extends keyof RecordData>(field: F, value: RecordData[F]): this;
