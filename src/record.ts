@@ -122,9 +122,9 @@ export class HSRecord<RecordData extends HSRecordData = HSRecordData> {
 	}
 
 	getFid<T extends keyof RecordData>(field: T): string;
-	getFid(field: number, byId: true): string;
-	getFid(field: string | number, byId?: false): string;
-	getFid(field: string | number, byId: boolean = false): string {
+	getFid(field: string, byId: true): string;
+	getFid(field: string, byId?: false): string;
+	getFid(field: string, byId: boolean = false): string {
 		const fids = this.getFids();
 		let id: string = '';
 
@@ -134,7 +134,6 @@ export class HSRecord<RecordData extends HSRecordData = HSRecordData> {
 			}
 		}else{
 			id = '';
-			field = +field;
 
 			Object.entries(fids).some(([ name, fid ]) => {
 				if(fid === field){
