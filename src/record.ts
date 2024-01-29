@@ -238,7 +238,7 @@ export class HSRecord<RecordData extends HSRecordData = HSRecordData> {
 		}
 
 		Object.entries(fids).forEach(([ name, fid ]) => {
-			this.set(name, record[fid].value);
+			this.set(name, record[fid]);
 		});
 
 		return this._data;
