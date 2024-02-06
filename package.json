@@ -1,6 +1,6 @@
 {
   "name": "@highsystems/record",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "A lightweight abstraction layer for High Systems",
   "keywords": [
     "High Systems",
@@ -38,8 +38,8 @@
   },
   "dependencies": {
     "deepmerge": "^4.3.1",
-    "@highsystems/client": "0.1.8",
-    "@highsystems/field": "0.1.8",
+    "@highsystems/client": "0.2.0",
+    "@highsystems/field": "0.2.0",
     "rfc4122": "^1.0.6"
   },
   "devDependencies": {
